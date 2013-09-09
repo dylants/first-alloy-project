@@ -9,3 +9,22 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+
+Alloy.Globals.setupWindow = function(win) {
+    Alloy.Globals.currentWindow = win;
+    if (OS_ANDROID) {
+        win.addEventListener('android:back', Alloy.Globals.closeWindow);
+    }
+};
+
+Alloy.Globals.closeWindow = function() {
+    if (Alloy.Globals.currentWindow) {
+        if (OS_ANDROID) {
+            Alloy.Globals.currentWindow.removeEventListener(
+                'android:back', Alloy.Globals.closeWindow);
+        }
+        Alloy.Globals.currentWindow.close();
+        Alloy.Globals.currentWindow = null;
+    }
+};

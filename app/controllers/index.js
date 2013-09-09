@@ -1,5 +1,2 @@
-function doClick(e) {
-    alert($.label.text);
-}
-
-$.index.open();
+$.homeWindow.open();
+Alloy.Globals.parent = $.homeWindow;

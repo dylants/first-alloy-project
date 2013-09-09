@@ -1,0 +1,15 @@
+"View" : {
+    top: "0",
+    height: "40dp",
+    width: "100%",
+    backgroundColor: "#030D86",
+    layout: "horizontal"
+},
+"Label" : {
+    color: "#dfdfdf",
+    center: {
+        x: "95%",
+        y: "50%"
+    },
+    width: "100%"
+}

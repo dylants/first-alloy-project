@@ -1,0 +1,9 @@
+<Alloy>
+    <Toolbar platform="ios">
+        <Items>
+            <Button id="home" title="Home" onClick="showHome"/>
+            <FlexSpace/>
+            <Button id="map" title="Map" onClick="showMap"/>
+        </Items>
+    </Toolbar>
+</Alloy>
