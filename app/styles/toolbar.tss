@@ -1,5 +1,12 @@
 "Toolbar" : {
     bottom: "0",
     borderTop: "true",
-    borderBottom: "false"
+    borderBottom: "false",
+    barColor: "#030D86"
+},
+"#home" : {
+    image: "home-icon.png"
+},
+"#map" : {
+    image: "map-icon.png"
 }
