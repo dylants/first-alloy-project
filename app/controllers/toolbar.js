@@ -1,3 +1,7 @@
+/*
+ * Click events
+ */
+
 var showHome = function(event) {
     var view;
 
@@ -22,6 +26,10 @@ var showMap = function(event) {
     updateMainView(view);
 };
 
+/*
+ * Helper functions
+ */
+
 var updateMainView = function(view) {
     var mainView;
 
@@ -34,3 +42,11 @@ var updateMainView = function(view) {
     // add the new view to our main view
     mainView.add(view);
 };
+
+Ti.App.addEventListener("showHome", function(event) {
+    showHome(event);
+});
+
+Ti.App.addEventListener("showMap", function(event) {
+    showMap(event);
+});

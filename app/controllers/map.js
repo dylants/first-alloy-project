@@ -3,6 +3,12 @@ if (Ti.Geolocation.locationServicesEnabled) {
     Titanium.Geolocation.purpose = "Get current location";
 
     Titanium.Geolocation.getCurrentPosition(function(event) {
+        if (event.error) {
+            Ti.API.log("error", "location services must be enabled");
+            alert("Please enable location services for this application");
+            Ti.App.fireEvent("showHome");
+            return;
+        }
         var region = {
             latitude: event.coords.latitude,
             longitude: event.coords.longitude,
@@ -16,5 +22,5 @@ if (Ti.Geolocation.locationServicesEnabled) {
         $.mapView.region = region;
     });
 } else {
-    alert("Please enable location services");
+    alert("Please enable location services for this application");
 }
