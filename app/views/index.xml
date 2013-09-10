@@ -1,7 +1,9 @@
 <Alloy>
-	<Window id="homeWindow" class="container">
-        <Require id="titlebarController" src="titlebar"/>
-        <Require id="homeController" src="home"/>
-        <Require id="toolbarController" src="toolbar"/>
-	</Window>
+    <Window id="mainWindow" class="container">
+        <Require id="titlebarController" src="titlebar" />
+        <View id="mainView">
+            <Require id="homeController" src="home" />
+        </View>
+        <Require id="toolbarController" src="toolbar" />
+    </Window>
 </Alloy>
